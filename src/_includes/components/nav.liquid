@@ -1,0 +1,28 @@
+{%- capture liclassbase -%}text-xl font-bold tracking-wide inline-flex items-center flex-shrink-0 mx-5 px-5 py-5{%- endcapture -%}
+<nav class="bg-blue-900 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+  <ul class="relative flex flex-wrap items-left justify-center -mx-5">
+    {%- for pg in collections.pages -%}
+      {%- if pg.url == '/' -%}
+        {%- capture liclassactive -%}{%- if page.url == pg.url -%}bg-blue-500{%- endif -%}{%- endcapture -%}
+        {%- capture liclasslist -%}{{ liclassbase }} {{ liclassactive }}{%- endcapture -%}
+        <li class="{{ liclasslist }}">
+          <a href="/" class="text-white">{{ pg.data.title }}</a>
+        </li>
+        {%- assign liclasslist = nil -%}
+        {%- assign liclassactive = nil -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- for pg in collections.pages -%}
+      {%- unless pg.url == '/' -%}
+        {%- capture liclassactive -%}{%- if page.url == pg.url -%}bg-blue-500{%- endif -%}{%- endcapture -%}
+        {%- capture liclasslist -%}{{ liclassbase }} {{ liclassactive }}{%- endcapture -%}
+        <li class="{{ liclasslist }}">
+          <a href="{{ pg.url }}" class="text-white">{{ pg.data.title }}</a>
+        </li>
+        {%- assign liclasslist = nil -%}
+        {%- assign liclassactive = nil -%}
+      {%- endunless -%}
+    {%- endfor -%}
+  </ul>
+</nav>
+{%- assign liclassbase = nil -%}

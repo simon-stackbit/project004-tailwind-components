@@ -1,0 +1,9 @@
+<section class="cta">
+  <h2>{{ section.title }}</h2>
+  <div>{{ section.subtitle }}</div>
+  <div class="actions grdGrid -middle -center">
+    {%- for current_action in section.actions -%}
+      {%- include 'components/action.liquid' action:current_action -%}
+    {%- endfor -%}
+  </div>
+</section>

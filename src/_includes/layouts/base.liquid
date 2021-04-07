@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  {% include 'layouts/html_head' %}
+  <body>
+    <div id="site-wrap">
+
+      {%- include 'components/nav.liquid' -%}
+      
+      <main id="content">
+        {{ content }}
+      </main>
+
+    </div>
+  </body>
+</html>

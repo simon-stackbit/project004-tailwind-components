@@ -1,0 +1,13 @@
+---
+layout: layouts/base
+---
+<div class="bg-gray-800 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+  <h1>{{ title }}</h1>
+  <figure>
+    <img src="{{ featured_image_url }}" />
+  </figure>
+</div>
+{%- for current_section in sections -%}
+  {%- capture section_type -%}components/{{ current_section.type }}.liquid{%- endcapture -%}
+  {%- include section_type section:current_section -%}
+{%- endfor -%}

@@ -1,0 +1,8 @@
+<section class="cards">
+  <h2>{{ section.title }}</h2>
+  <div class="gallery grdGrid -middle -left">
+    {%- for current_card in section.cards -%}
+      {%- include 'components/card.liquid' card:current_card -%}
+    {%- endfor -%}
+  </div>
+</section>

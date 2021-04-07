@@ -1,0 +1,93 @@
+stackbitVersion: ~0.3.0
+ssgName: eleventy
+buildCommand: npm run build
+publishDir: _site
+pagesDir: src/markdown
+staticDir: src/static
+uploadDir: src/static/images
+dataDir: src/_data
+
+models:
+  flexible_page:
+    type: page
+    label: Flexible Page
+    folder: 'flexible_pages' # Needed to match the pages to models, for READING content https://www.stackbit.com/docs/stackbit-yaml/page-models/#page_model_matching_properties
+    filePath: 'flexible_pages/{slug}.md' # Fully qualify because nothing to do w/ "folder".  This is for WRITING new pages.
+    urlPath: '/{slug}' # This is for WRITING new pages (and also for read).  Not necessary if URL is obvious from file, if doesn't match folder structure, etc.  Problem:  if you try to use a different token than you used in "filePath", you get "lorem-ipsum" for the non-filePath token, which, as a URL, confounds the SSG & consequently Studio, too.  So, basically, Studio doesn't support using more than 1 variable at a time in your filepath/URL, or using a different variable in your filepath/URL, since it only gives you 1 "New page path" data entry field upon new-record-creation.  (That said, they're working on making it prompt you for all required fields in the form, so don't worry about this for long.)
+    fields:
+      - type: string
+        name: title
+        label: Page Title
+        required: true
+        default: Replace this text with a page title
+      - type: string
+        name: featured_image_url
+        label: Featured Image URL
+        required: true
+        default: /assets/images/header_fireworks.svg
+      - type: list
+        name: sections
+        label: Sections
+        items:
+          type: model
+          models: [section_cta, section_cards]
+  section_cta:
+    type: object
+    label: Call to Action
+    fields:
+      - type: string
+        name: title
+        label: Title
+        required: true
+      - type: string
+        name: subtitle
+        label: Subtitle
+        required: true
+      - type: list
+        name: actions
+        label: Actions
+        items:
+          type: model
+          models: [action]
+  section_cards:
+    type: object
+    label: Card Gallery
+    fields:
+      - type: string
+        name: title
+        label: Title
+        required: true
+      - type: list
+        name: cards
+        label: Cards
+        items:
+          type: model
+          models: [card]
+  action:
+    type: object
+    label: Action
+    fields:
+      - type: string
+        name: text
+        label: Text
+        required: true
+      - type: string
+        name: url
+        label: URL
+        required: true
+  card:
+    type: object
+    label: Card
+    fields:
+      - type: string
+        name: image
+        label: Image URL
+        required: true
+      - type: string
+        name: title
+        label: Title
+        required: true
+      - type: string
+        name: excerpt
+        label: Excerpt
+        required: true

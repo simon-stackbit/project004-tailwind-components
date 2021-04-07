@@ -1,0 +1,12 @@
+<div class="grdCell -4of12">
+  <div class="card">
+    <h3 style="margin-top: 0rem">{{ card.title }}</h3>
+    {%- if card.image -%}
+    <div>
+      <img src="{{ card.image }}" />
+    </div>
+    {%- endif -%} {%- if card.excerpt -%}
+    <div>{{ card.excerpt }}</div>
+    {%- endif -%}
+  </div>
+</div>

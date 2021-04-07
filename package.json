@@ -1,0 +1,30 @@
+{
+    "name": "stackbit-11ty-tailwind-jit-components",
+    "version": "0.0.1",
+    "author": {
+        "name": "Katie Kodes",
+        "url": "https://katiekodes.com"
+    },
+    "main": ".eleventy.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kkgthb/web-site-kitwind-liquid.git"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "cross-env NODE_ENV=production npx eleventy",
+        "dev": "cross-env NODE_ENV=development npx eleventy --watch --serve",
+        "develop": "npx eleventy --watch --serve",
+        "now-build": "cross-env NODE_ENV=production npm run build",
+        "debug": "DEBUG=* npx eleventy"
+    },
+    "dependencies": {
+        "@11ty/eleventy": "latest",
+        "@tailwindcss/jit": "latest",
+        "autoprefixer": "latest",
+        "cross-env": "latest",
+        "postcss": "latest",
+        "postcss-cli": "latest",
+        "tailwindcss": "latest"
+    }
+}

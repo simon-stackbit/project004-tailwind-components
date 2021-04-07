@@ -1,0 +1,1 @@
+module.exports = { domain_name: process.env.URL };
