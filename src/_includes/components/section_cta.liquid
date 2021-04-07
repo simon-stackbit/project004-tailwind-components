@@ -1,9 +1,11 @@
-<section class="cta">
-  <h2>{{ section.title }}</h2>
-  <div>{{ section.subtitle }}</div>
-  <div class="actions grdGrid -middle -center">
-    {%- for current_action in section.actions -%}
-      {%- include 'components/action.liquid' action:current_action -%}
-    {%- endfor -%}
+<section class="py-8 px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+  <div class="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-500 rounded-lg py-16">
+    <h2 class="text-3xl font-bold text-white text-center mb-4">{{ section.title }}</h2>
+    <p class="text-xl text-white text-center mb-8">{{ section.subtitle }}</p>
+    <div class="relative flex flex-wrap items-left justify-center -my-6">
+      {%- for current_action in section.actions -%}
+        {%- include 'components/action.liquid' action:current_action -%}
+      {%- endfor -%}
+    </div>
   </div>
 </section>
