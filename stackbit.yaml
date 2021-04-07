@@ -31,7 +31,7 @@ models:
         label: Sections
         items:
           type: model
-          models: [section_cta, section_cards]
+          models: [section_cta, section_cards, section_hero]
   section_cta:
     type: object
     label: Call to Action
@@ -91,4 +91,20 @@ models:
       - type: string
         name: excerpt
         label: Excerpt
+        required: true
+  section_hero:
+    type: object
+    label: Hero
+    fields:
+      - type: string
+        name: title
+        label: Title
+        required: true
+      - type: string
+        name: subtitle
+        label: Subtitle
+        required: true
+      - type: string
+        name: image
+        label: Image URL
         required: true

@@ -2,6 +2,10 @@
 title: Home
 featured_image_url: /static/images/header_house.svg
 sections:
+  - type: section_hero
+    title: Be your own hero
+    subtitle: And encourage others to do the same
+    image: /static/images/header_paper_airplane.svg
   - type: section_cards
     title: How to doodle cartoons
     cards:
