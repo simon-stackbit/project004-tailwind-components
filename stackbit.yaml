@@ -1,6 +1,6 @@
 stackbitVersion: ~0.3.0
 ssgName: eleventy
-nodeVersion: 15
+nodeVersion: 14
 buildCommand: npm run build
 publishDir: _site
 pagesDir: src/markdown
