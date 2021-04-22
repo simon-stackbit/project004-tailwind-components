@@ -33,7 +33,7 @@ sections:
         url: 'https://stackbit.com/blog'
   - title: My new card gallety
     cards:
-      - image: /static/images/dog.svg
+      - image: /static/images/forest.svg
         title: lorem-ipsum
         excerpt: lorem-ipsum
         type: card
