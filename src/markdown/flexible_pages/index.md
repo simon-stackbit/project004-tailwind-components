@@ -40,5 +40,6 @@ sections:
       - title: lorem-ipsum
         excerpt: lorem-ipsum
         type: card
+        image: /static/images/garden.jpg
     type: section_cards
 ---
