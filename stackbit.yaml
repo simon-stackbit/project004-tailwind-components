@@ -12,7 +12,7 @@ dataDir: src/_data
 assets:
   referenceType: static
   staticDir: src
-  uploadDir: images
+  uploadDir: static/images
   publicPath: /
 
 models:
