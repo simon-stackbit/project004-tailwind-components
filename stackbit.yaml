@@ -11,7 +11,7 @@ dataDir: src/_data
 
 assets:
   referenceType: static
-  staticDir: static
+  staticDir: src/static
   uploadDir: uploads
   publicPath: /
 
