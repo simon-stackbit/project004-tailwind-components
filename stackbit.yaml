@@ -9,6 +9,12 @@ dataDir: src/_data
 #staticDir: src/static
 #uploadDir: src/static/images
 
+assets:
+  referenceType: static
+  staticDir: static
+  uploadDir: uploads
+  publicPath: /
+
 models:
   flexible_page:
     type: page
