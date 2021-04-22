@@ -32,6 +32,10 @@ sections:
       - text: Learn more
         url: 'https://stackbit.com/blog'
   - title: My new card gallety
-    cards: []
+    cards:
+      - image: lorem-ipsum
+        title: lorem-ipsum
+        excerpt: lorem-ipsum
+        type: card
     type: section_cards
 ---
