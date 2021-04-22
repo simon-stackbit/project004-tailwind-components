@@ -31,7 +31,7 @@ sections:
         url: 'https://jamstack.new'
       - text: Learn more
         url: 'https://stackbit.com/blog'
-  - title: lorem-ipsum
+  - title: My new card gallety
     cards: []
     type: section_cards
 ---
