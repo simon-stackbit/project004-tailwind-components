@@ -37,5 +37,8 @@ sections:
         title: lorem-ipsum
         excerpt: lorem-ipsum
         type: card
+      - title: lorem-ipsum
+        excerpt: lorem-ipsum
+        type: card
     type: section_cards
 ---
