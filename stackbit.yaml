@@ -4,10 +4,10 @@ nodeVersion: 14
 buildCommand: npm run build
 publishDir: _site
 pagesDir: src/markdown
-
-staticDir: src/static
-uploadDir: src/static/images
 dataDir: src/_data
+
+#staticDir: src/static
+#uploadDir: src/static/images
 
 models:
   flexible_page:
