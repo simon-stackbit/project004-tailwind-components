@@ -87,7 +87,7 @@ models:
     type: object
     label: Card
     fields:
-      - type: string
+      - type: images
         name: image
         label: Image URL
         required: true
